@@ -83,7 +83,7 @@ beakers.forEach(beaker => {
             draggedItem.style.position = ''; // Clear absolute positioning
             draggedItem.style.left = ''; // Clear left position
             draggedItem.style.top = ''; // Clear top position
-        }, 1500);
+        }, 2000);
     });
 });
 
