@@ -99,7 +99,7 @@ checkBtn.addEventListener("click", () => {
 
         if (userAnswer === "SELECT") {
             select.style.border = "2px solid orange"; // Unselected option
-        } else if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        } else if (userAnswer === correctAnswer) {
             select.style.border = "2px solid green"; // Correct answer
         } else {
             select.style.border = "2px solid red"; // Incorrect answer
