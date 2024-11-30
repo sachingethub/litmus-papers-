@@ -78,13 +78,12 @@ beakers.forEach(beaker => {
         draggedItem.style.top = `${beakerRect.top - containerRect.top - draggedItem.offsetHeight / 2}px`;
         draggedImg.src = newImageSrc;
 
-        // Reset the position after 3 seconds
         setTimeout(() => {
             draggedImg.src = originalImageSrc; // Reset image source
             draggedItem.style.position = ''; // Clear absolute positioning
             draggedItem.style.left = ''; // Clear left position
             draggedItem.style.top = ''; // Clear top position
-        }, 2000);
+        }, 1500);
     });
 });
 
