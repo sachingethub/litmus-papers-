@@ -4,26 +4,26 @@ const resetBtn = document.getElementById('reset-btn');
 const check = document.getElementById('correct-answers-table');
 
 const correctAnswers = {
-    "blue-a": "no change",
-    "red-a": "no change",
+    "blue-a": "No effect ",
+    "red-a": "No effect ",
     "type-a": "Neutral",
-    "blue-b": "turns red",
-    "red-b": "no change",
+    "blue-b": "Turns to pink",
+    "red-b": "No effect ",
     "type-b": "Acidic",
-    "blue-c": "turns red",
-    "red-c": "no change",
+    "blue-c": "Turns to pink",
+    "red-c": "No effect ",
     "type-c": "Acidic",
-    "blue-d": "no change",
-    "red-d": "no change",
+    "blue-d": "No effect ",
+    "red-d": "Turns to blue ",
     "type-d": "Alkaline",
-    "blue-e": "no change",
-    "red-e": "turns blue",
+    "blue-e": "No effect ",
+    "red-e": "Turns to blue",
     "type-e": "Alkaline",
-    "blue-f": "no change",
-    "red-f": "turns blue",
+    "blue-f": "No effect ",
+    "red-f": "Turns to blue",
     "type-f": "Alkaline",
-    "blue-g": "turns red",
-    "red-g": "no change",
+    "blue-g": "Turns to red",
+    "red-g": "No effect ",
     "type-g": "Acidic",
 };
 const litmusPapers = document.querySelectorAll('.papers .redlitmus, .papers .bluelitmus');
@@ -59,7 +59,7 @@ beakers.forEach(beaker => {
 
         // Change image source based on conditions
         if (draggedImg.src.includes('Red_Litmus.png') && type === 'acidic' && beakerId === 'g') {
-            newImageSrc = './images/Blue_to_red_Litmus.png';
+            newImageSrc = './images/Red_Litmus.png';
         } else if (draggedImg.src.includes('Blue_litmus.png') && type === 'acidic' && beakerId === 'g') {
             newImageSrc = './images/Blue_to_red_Litmus.png'; // Change this line to turn blue litmus red in acid beaker with ID 'g'
         } else if (draggedImg.src.includes('Blue_litmus.png') && type === 'acidic') {
@@ -89,22 +89,19 @@ beakers.forEach(beaker => {
 });
 
 checkBtn.addEventListener("click", () => {
-    // Get all the selects
     const selects = document.querySelectorAll("select");
     result.style.display = 'block';
     resetBtn.style.display = 'block';
 
-
     // Check each select against the correct answers
     selects.forEach((select) => {
         const id = select.id;
-        const userAnswer = select.value.toLowerCase();
-        const correctAnswer = correctAnswers[id].toLowerCase();
+        const userAnswer = select.value.trim(); // Trim spaces for comparison
+        const correctAnswer = correctAnswers[id].trim();
 
-        // Add feedback
-        if (userAnswer === "select") {
+        if (userAnswer === "SELECT") {
             select.style.border = "2px solid orange"; // Unselected option
-        } else if (userAnswer === correctAnswer) {
+        } else if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
             select.style.border = "2px solid green"; // Correct answer
         } else {
             select.style.border = "2px solid red"; // Incorrect answer
