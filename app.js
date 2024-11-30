@@ -92,11 +92,9 @@ checkBtn.addEventListener("click", () => {
     const selects = document.querySelectorAll("select");
     result.style.display = 'block';
     resetBtn.style.display = 'block';
-
-    // Check each select against the correct answers
     selects.forEach((select) => {
         const id = select.id;
-        const userAnswer = select.value.trim(); // Trim spaces for comparison
+        const userAnswer = select.value.trim();
         const correctAnswer = correctAnswers[id].trim();
 
         if (userAnswer === "SELECT") {
