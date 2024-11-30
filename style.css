@@ -11,7 +11,7 @@ body {
 .container {
     height: 43vw;
     width: 100%;
-    background-image: url('./images/BG.png');
+    background-image: url(./images/BG.png);
     object-fit: fill;
     background-size: 100% 100%;
     
@@ -95,7 +95,7 @@ body {
     height: 30vw;
     width: 100%;
     /* background-color: black; */
-    background-image: url('./images/Lab_Beaker.png');
+    background-image: url(./images/Lab_Beaker.png);
     background-size: 90% 30vw ;
     background-position: center;
     background-repeat: no-repeat;
