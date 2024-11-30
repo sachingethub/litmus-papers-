@@ -109,6 +109,7 @@ result.addEventListener('click',()=>{
     check.style.display = 'block';
     resetBtn.style.display = 'block';
     result.style.display = 'none';
+    check.scrollIntoView({ behavior: "smooth" });
 })
 // Reset button functionality
 resetBtn.addEventListener("click", () => {
