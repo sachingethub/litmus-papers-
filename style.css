@@ -9,15 +9,15 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 43vw;
     width: 100%;
-    background-image: url('./images/BG.png');
+    background-image: url(/images/BG.png);
     object-fit: fill;
     background-size: 100% 100%;
     
 }
 .container .top-div{
-    height: 40vh;
+    height: 16vw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,8 +25,8 @@ body {
     flex-direction: row;
 }
 .container .top-div .litmus-paper{
-    height: 40vh;
-    width: 45vw;   
+    height: 100%;
+    width: 45vw;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -35,86 +35,95 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.container .top-div .litmus-paper .redlitmus{
-    position: absolute;
-    top: 16vh;
-    left: 11vw;
-}
 .container .top-div .litmus-paper .bluelitmus{
     position: absolute;
-    top: 14vh;
-    right: 17.3vw;
+    top: 8vw;
+    left: 10vw;
+}
+.container .top-div .litmus-paper .redlitmus{
+    position: absolute;
+    top: 7vw;
+    right: 20.05vw;
 }
 .container .top-div .litmus-paper  img{
-    height: 13vh;
+    height: 6vw;
     z-index: 1;
 }
 .container .top-div .litmus-paper .imgclip{
-    height: 20vh;
-    width: 100%;
+    height: 10vw;
+    width: 90%;
     z-index: 9;
 }
 .container .top-div .litmus-paper .red{
     position:absolute;
-    top: 15vh;
-    right: 8.4vw;
-    height: 8vh;
-    width: 8vw;
+    top: 7.7vw;
+    right: 7.4vw;
+    height: 4vw;
+    width: 9vw;
+    font-size:1vw;
     background-color: rgba(240, 190, 143, 0.733);
     padding: 10px;
     border-radius: 10px;
 }
 .container .top-div .litmus-paper .blue{
     position: absolute;
-    top: 20vh;
+    top: 8vw;
     left: 13vw;
-    height: 8vh;
-    width: 8vw;
+    height: 4vw;
+    width: 9vw;
+    font-size:1vw;
     background-color: rgba(240, 190, 143, 0.733);
     padding: 8px;
     border-radius: 10px;
 }
 .container .top-div .textcontainer{
-    /* height: 40vh; */
+
     width: 55vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .textcontainer .text{
-    font-size: 1.5vw;
+    height:8vw; 
+    font-size: 1.4vw;
     background-color: rgba(0, 0, 0, 0.603);
     color: white;
-    padding: 30px 10px;
+    padding: 2.3vw 0.3vw;
     border-radius: 50px 0px 0px 50px;
 }
 .container .bottom-div{
-    height: 60vh;
+    height: 30vw;
     width: 100%;
-    background-image: url('./images/Lab_Beaker.png');
-    background-size: 100% 100% ;
+    /* background-color: black; */
+    background-image: url(/images/Lab_Beaker.png);
+    background-size: 90% 30vw ;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
 .container .bottom-div .beakers{
-    height: 30vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: right;
-    padding-right: 38px;
-    gap: 31px;
+    padding-right: 8vw;
+    gap: 2.2vw;
 }
 .container .bottom-div .beakers .beaker{
-    padding: 20px;
-    height: 20vh;
-    width: 8vw;
+    /* padding: 20px; */
+    height: 14vw;
+    width: 7.1vw;
+    
+    
     border-radius: 10px 10px 10px 10px ;
 }
 .container .bottom-div .tables{
-    height: 30vh;
+    
+    height: 100%;
     width: 100%;
-    background-image: url('./images/Table_BG.png');
+    /* background-image: url(Table_BG.png); */
+    background-color: white;
     background-size: 100% 100%;
     
     padding:0px 15px ;
@@ -122,104 +131,114 @@ body {
 }
 select{
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 0.1vw;
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;   
+    font-size:1vw;
+    background: none;
 }
-.container .bottom-div .tables .table-fixer{
-    margin-top: 2vh;
-    height:26vh;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
+
 table {
-    width: 100%;
+    width: 80vw;
+    height:16vw;
     border-collapse: collapse;
-    margin: 1rem 0;
-    font-size: 1rem;
-    text-align: left;
+    margin: 0.5vw 0;
+    font-size: 1vw;
+    text-align: center;
+}
+option{
+    text-align:center;
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 0.75rem;
+    padding: 0.1vw;
 }
 
 th {
     background-color: #f4f4f4;
     font-weight: bold;
+    padding: 0.5vw;
 }
 
 td input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.1vw;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-    thead tr {
-        display: none;
-    }
-    tr {
-        margin-bottom: 1rem;
-    }
-    td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem;
-    }
-    td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        text-transform: capitalize;
-    }
-}
+
 .secound-container{
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding-top: 2vw;
+    margin-top:2vw;
+    
 }
 .secound-container .controls{
-    height: 10vh;
-    width: 50%;
-    margin: auto;
-    background-color: rgb(244, 247, 246);
+    height: 15vw;
+    width: 20%;
+    position: absolute;
+    right:0;
+    top:32vw;
     display: flex;
+    flex-direction: column;
+    gap:2vw;
     align-items: center;
     justify-content: space-around;
 }
 .secound-container .controls #check-btn{
-    height: 8vh;
+    height: 4vw;
     width: 10vw;
     padding: 10px;
     border-radius: 10px;
+    font-size:1vw;
     border: none;
     background-color: hsla(0, 1%, 32%, 0.301);
 }
 .secound-container .controls #result-btn{
-    height: 8vh;
+    height: 4vw;
     width: 10vw;
     padding: 10px;
     border-radius: 10px;
+    font-size:1vw;
     border: none;
     background-color: hsla(0, 1%, 32%, 0.301);
     display: none;
 }
 .secound-container .controls #reset-btn{
-    height: 8vh;
+    height: 4vw;
     width: 10vw;
     padding: 10px;
     border-radius: 10px;
+    font-size:1vw;
     border: none;
     background-color: hsla(0, 1%, 32%, 0.301);
     display: none;
+}
+
+#correct-answers-table{
+    width: 60vw;
+    height:16vw;    
+    border-collapse: collapse;
+    display: none;
+    font-size: 1vw;
+    margin: auto;
+    margin-top:2vw ;
+    position: absolute;
+    top: 48vw;
+    left: 20vw;
+}
+
+#correct-answers-table th, #correct-answers-table td {
+    border: 1px solid #ddd;
+    padding: 0.5vw;
+    
+}
+
+#correct-answers-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
