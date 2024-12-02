@@ -1,0 +1,247 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    height: 43vw;
+    width: 100%;
+    background-image: url('./images/BG.png');
+    object-fit: fill;
+    background-size: 100% 100%;
+    
+}
+.container .top-div{
+    height: 16vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.container .top-div .litmus-paper{
+    height: 100%;
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.papers > div {
+    transition: all 0.3s ease-in-out;
+}
+
+.container .top-div .litmus-paper .bluelitmus{
+    position: absolute;
+    top: 8vw;
+    left: 10vw;
+}
+.container .top-div .litmus-paper .redlitmus{
+    position: absolute;
+    top: 7vw;
+    right: 20.05vw;
+}
+.container .top-div .litmus-paper  img{
+    height: 6vw;
+    z-index: 1;
+}
+.container .top-div .litmus-paper .imgclip{
+    height: 10vw;
+    width: 90%;
+    z-index: 9;
+}
+.container .top-div .litmus-paper .red{
+    position:absolute;
+    top: 7.7vw;
+    right: 10vw;
+    height: 3.4vw;
+    width: 9vw;
+    font-size:1vw;
+    background-color: rgb(250, 240, 200);
+    padding: 0.5vw 0.25vw ;
+    font-weight: 550;
+    /* border-radius: 10px; */
+}
+.container .top-div .litmus-paper .blue{
+    position: absolute;
+    top: 10.5vw;
+    left: 11.6vw;
+    height: 3.4vw;
+    width: 9vw;
+    font-size:1vw;
+    background-color: rgb(250, 240, 200);
+    padding: 0.5vw 0.25vw ;
+    /* border-radius: 10px; */
+    font-weight: 550;
+}
+.container .top-div .textcontainer{
+
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textcontainer .text{
+    /* height:6vw;  */
+    background-color: rgba(0, 0, 0, 0.603);
+    color: white;
+    padding:  1.5vw 1.6vw;
+    border-radius: 50px 0px 0px 50px;
+    font-size: 1.4vw;
+}
+
+.container .bottom-div{
+    height: 30vw;
+    width: 100%;
+    /* background-color: black; */
+    background-image: url('./images/Lab_Beaker.png');
+    background-size: 90% 30vw ;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+.container .bottom-div .beakers{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 8vw;
+    gap: 2.2vw;
+}
+.container .bottom-div .beakers .beaker{
+    /* padding: 20px; */
+    height: 14vw;
+    width: 7.1vw;
+    
+    
+    border-radius: 10px 10px 10px 10px ;
+}
+.container .bottom-div .tables{
+    
+    height: 100%;
+    width: 100%;
+    /* background-image: url(Table_BG.png); */
+    background-color: white;
+    background-size: 100% 100%;
+    
+    padding:0px 15px ;
+    
+}
+select{
+    width: 100%;
+    padding: 0.1vw;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;   
+    font-size:1vw;
+    background: none;
+}
+
+table {
+    width: 80vw;
+    height:16vw;
+    border-collapse: collapse;
+    margin: 0.5vw 0;
+    font-size: 1vw;
+    text-align: center;
+}
+option{
+    text-align:center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.1vw;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    padding: 0.5vw;
+}
+
+td input {
+    width: 100%;
+    padding: 0.1vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.secound-container{
+    height: 100%;
+    width: 100%;
+    padding-top: 2vw;
+    margin-top:2vw;
+    
+}
+.secound-container .controls{
+    height: 15vw;
+    width: 20%;
+    position: absolute;
+    right:0;
+    top:32vw;
+    display: flex;
+    flex-direction: column;
+    gap:2vw;
+    align-items: center;
+    justify-content: space-around;
+}
+.secound-container .controls #check-btn{
+    height: 4vw;
+    width: 10vw;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:1vw;
+    border: none;
+    background-color: hsla(0, 1%, 32%, 0.301);
+}
+.secound-container .controls #result-btn{
+    height: 4vw;
+    width: 10vw;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:1vw;
+    border: none;
+    background-color: hsla(0, 1%, 32%, 0.301);
+    display: none;
+}
+.secound-container .controls #reset-btn{
+    height: 4vw;
+    width: 10vw;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:1vw;
+    border: none;
+    background-color: hsla(0, 1%, 32%, 0.301);
+    display: none;
+}
+
+#correct-answers-table{
+    width: 60vw;
+    height:16vw;    
+    border-collapse: collapse;
+    display: none;
+    font-size: 1vw;
+    margin: auto;
+    margin-top:2vw ;
+    position: absolute;
+    top: 48vw;
+    left: 20vw;
+}
+
+#correct-answers-table th, #correct-answers-table td {
+    border: 1px solid #ddd;
+    padding: 0.5vw;
+    
+}
+
+#correct-answers-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
